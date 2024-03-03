@@ -5,9 +5,11 @@ from rest_framework.views import APIView
 import joblib
 
 class MLModel(APIView):
-    def post(self, request):
+    def get(self, request, input):
+        input_data = input
+        print('input_data12aaaaaaaaaaaaaaaaaaaaaaaaaaa' , input_data)
         # Assuming you receive the new_data as a JSON object in the request
-        input_data = request.data.get('input', '')
+        # input_data = request.data.get('input', '')
         if input_data:
             # Load the trained model
             classifier = joblib.load('trained_model.pkl')
