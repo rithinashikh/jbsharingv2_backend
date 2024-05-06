@@ -12,10 +12,10 @@ class MLModel(APIView):
         # input_data = request.data.get('input', '')
         if input_data:
             # Load the trained model
-            classifier = joblib.load('trained_model_final.pkl')
+            classifier = joblib.load('trained_model_final1.pkl')
 
             # Load the vectorizer
-            vectorizer = joblib.load('tfidf_vectorizer_final.pkl')
+            vectorizer = joblib.load('tfidf_vectorizer_final1.pkl')
 
             # Example prediction
             new_input_vectorized = vectorizer.transform([input_data])
